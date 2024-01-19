@@ -1,0 +1,25 @@
+@import url(https://fonts.google.com/specimen/Raleway);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+
+:root {
+  --raleway: 'Raleway', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+
+  --primary-color: hsl(217, 28%, 15%);
+  --primary-color-main: hsl(218, 28%, 13%);
+  --primary-color-footer: hsl(216, 53%, 9%);
+  --primary-color-testimonial: hsl(219, 30%, 18%);
+
+  --accent-color-cyan: hsl(176, 68%, 64%);
+  --accent-color-blue: hsl(198, 60%, 50%);
+  --accent-color-light: hsl(0, 100%, 63%);
+
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --fs-normal: 0.875rem;
+}
+
+body {
+  font-family: var(--raleway);
+}
