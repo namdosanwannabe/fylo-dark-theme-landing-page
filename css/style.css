@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
 :root {
   --raleway: 'Raleway', sans-serif;
@@ -11,8 +11,8 @@
   --primary-color-footer: hsl(216, 53%, 9%);
   --primary-color-testimonial: hsl(219, 30%, 18%);
 
-  --accent-color-cyan: hsl(176, 68%, 64%);
-  --accent-color-blue: hsl(198, 60%, 50%);
+  --accent-color-cyan: rgb(102, 227, 219);
+  --accent-color-blue: rgb(51, 158, 204);
   --accent-color-light: hsl(0, 100%, 63%);
 
   --fw-400: 400;
@@ -108,7 +108,7 @@ header {
 }
 
 .welcome__content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   max-width: 550px;
   text-align: center;
 }
@@ -127,6 +127,16 @@ header {
     to right,
     var(--accent-color-cyan),
     var(--accent-color-blue)
+  );
+
+  cursor: pointer;
+}
+
+.welcome__btn-get-started:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(153, 255, 251),
+    rgb(102, 204, 255)
   );
 }
 
@@ -178,4 +188,81 @@ header {
   max-width: 80%;
   font-size: var(--fs-normal);
   text-align: center;
+}
+
+.ads-section {
+  padding: 10% 0;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.ads__image {
+  max-width: 40%;
+}
+
+.ads__contents {
+  display: flex;
+  flex-direction: column;
+  max-width: 35%;
+
+  gap: 1.1rem;
+}
+
+.contents__title {
+  font-family: var(--raleway);
+  font-size: 2rem;
+  font-weight: 600;
+
+  max-width: 20vw;
+}
+
+.contents__decs {
+  font-family: var(--raleway);
+  font-size: var(--fs-normal);
+  font-weight: 500;
+}
+
+.content__button {
+  position: relative;
+
+  text-decoration: none;
+  color: var(--accent-color-cyan);
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.content__button::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+  transition: transform 0.3s ease;
+}
+
+.content__button:hover::before,
+.content__button:hover {
+  color: white;
+  transform: scaleX(1);
+}
+
+@media only screen and (min-width: 425px) and (max-width: 600px) {
+  header {
+    padding: 2rem 2rem;
+  }
+
+  .header__logo {
+    max-width: 6rem;
+  }
+
+  .navigation ul {
+    gap: 1.4rem;
+  }
 }
