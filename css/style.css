@@ -253,6 +253,69 @@ header {
   transform: scaleX(1);
 }
 
+.reviews-section {
+  position: relative;
+  margin: 0rem 7rem 4rem;
+}
+
+.bg-quotes {
+  position: absolute;
+  top: -35px;
+  left: -10px;
+  z-index: -1;
+}
+
+.reviews__items {
+  display: flex;
+
+  gap: 2.5rem;
+}
+
+.reviews {
+  padding: 2.5rem 2rem 2rem 2rem;
+  background-color: var(--primary-color-testimonial);
+
+  border: none;
+  border-radius: 5px;
+}
+
+.reviews__message {
+  font-family: var(--raleway);
+  font-size: var(--fs-normal);
+  font-weight: 500;
+
+  line-height: 1.3rem;
+  letter-spacing: 0.02rem;
+}
+
+.reviews__profile-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 1rem;
+}
+
+.profile-img {
+  width: 30px;
+
+  border: none;
+  border-radius: 1000px;
+}
+
+.reviews__profile-name {
+  font-size: 0.7rem;
+  letter-spacing: 0.05rem;
+  font-family: var(--raleway);
+}
+
+.reviews__profile-job {
+  font-size: 0.55rem;
+  font-family: var(--raleway);
+  font-weight: 400;
+  margin-top: 4%;
+}
+
 @media only screen and (min-width: 425px) and (max-width: 600px) {
   header {
     padding: 2rem 2rem;
@@ -264,5 +327,16 @@ header {
 
   .navigation ul {
     gap: 1.4rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .items {
+    max-width: 60%;
+  }
+
+  .future-section {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 35%);
   }
 }
