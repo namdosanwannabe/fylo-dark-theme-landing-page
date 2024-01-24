@@ -254,8 +254,10 @@ header {
 }
 
 .reviews-section {
+  height: 50vh;
   position: relative;
-  margin: 0rem 7rem 4rem;
+  margin: 0rem 7rem 5rem;
+  align-items: center;
 }
 
 .bg-quotes {
@@ -316,6 +318,93 @@ header {
   margin-top: 4%;
 }
 
+.early-access-container {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  max-width: 65%;
+  background-color: var(--primary-color);
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  padding: 2.5rem 4rem;
+
+  filter: drop-shadow(5px 6px 6px #000); /* Drop shadow with blur */
+}
+
+.access__title {
+  font-size: 1.6rem;
+  font-family: var(--raleway);
+  letter-spacing: 0.05rem;
+}
+
+.access__desc {
+  max-width: 550px;
+  font-size: 0.75rem;
+}
+
+.access__inputs {
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+}
+
+.access__inputs input {
+  border: none;
+  border-radius: 1000px;
+
+  padding: 0.8rem 1.9rem;
+  font-family: var(--raleway);
+}
+
+.access__inputs #access__email {
+  flex: 2;
+  font-size: 0.65rem;
+  font-weight: 600;
+  outline: none;
+  color: #000;
+}
+
+.access__inputs #access__email::placeholder {
+  font-weight: 400;
+}
+
+#access__btn-get-started {
+  flex: 1;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+  background-image: linear-gradient(
+    to right,
+    var(--accent-color-cyan),
+    var(--accent-color-blue)
+  );
+
+  cursor: pointer;
+}
+
+#access__btn-get-started:hover {
+  background-image: linear-gradient(
+    to right,
+    rgb(153, 255, 251),
+    rgb(102, 204, 255)
+  );
+}
+
+footer {
+  position: relative;
+  background-color: var(--primary-color-footer);
+  height: 50vh;
+}
+
 @media only screen and (min-width: 425px) and (max-width: 600px) {
   header {
     padding: 2rem 2rem;
@@ -327,6 +416,18 @@ header {
 
   .navigation ul {
     gap: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .reviews-section {
+    height: 100vh;
+    margin: 0rem 2rem 0rem;
+  }
+  .reviews__items {
+    flex-direction: column;
+
+    gap: 1.5rem;
   }
 }
 
